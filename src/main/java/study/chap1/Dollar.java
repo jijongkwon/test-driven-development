@@ -10,4 +10,9 @@ public class Dollar {
     Dollar times(int multiple){
         return new Dollar(amount * multiple);
     }
+
+    public boolean equals(Object object){
+        Dollar dollar = (Dollar) object;
+        return amount == dollar.amount;
+    }
 }
