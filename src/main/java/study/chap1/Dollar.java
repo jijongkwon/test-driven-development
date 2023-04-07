@@ -5,7 +5,7 @@ public class Dollar extends Money{
         this.amount = amount;
     }
 
-    Dollar times(int multiple){
+    Money times(int multiple){
         return new Dollar(amount * multiple);
     }
 }
