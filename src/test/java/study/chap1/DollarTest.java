@@ -1,7 +1,6 @@
 package study.chap1;
 
 import org.junit.jupiter.api.Test;
-import study.chap1.Dollar;
 
 import static org.junit.jupiter.api.Assertions.*;
 
