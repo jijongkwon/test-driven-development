@@ -6,10 +6,6 @@ public class Dollar extends Money{
         super(amount,currency);
     }
 
-    Money times(int multiple){
-        return Money.dollar(amount * multiple);
-    }
-
     String currency(){
         return currency;
     }

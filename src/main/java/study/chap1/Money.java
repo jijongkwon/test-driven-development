@@ -1,6 +1,6 @@
 package study.chap1;
 
-abstract public class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -19,10 +19,17 @@ abstract public class Money {
 
     public boolean equals(Object object) {
         Money money = (Money) object;
-        return amount == money.amount && getClass().equals(money.getClass());
+        return amount == money.amount
+                && currency().equals(money.currency);
     }
 
-    abstract Money times(int multiple);
+    public String toString(){
+        return amount + " " + currency;
+    }
+
+    Money times(int multiple){
+        return new Money(amount * multiple, currency);
+    }
 
     String currency(){
         return currency;

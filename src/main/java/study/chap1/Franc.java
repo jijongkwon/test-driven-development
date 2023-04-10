@@ -6,10 +6,6 @@ public class Franc extends Money {
         super(amount, currency);
     }
 
-    Money times(int multiple){
-        return Money.franc(amount * multiple);
-    }
-
     String currency(){
         return currency;
     }
