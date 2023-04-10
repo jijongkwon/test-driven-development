@@ -10,11 +10,11 @@ public class Money {
     }
 
     static Money dollar(int amount) {
-        return new Dollar(amount, "USD");
+        return new Money(amount, "USD");
     }
 
     static Money franc(int amount) {
-        return new Franc(amount, "CHF");
+        return new Money(amount, "CHF");
     }
 
     public boolean equals(Object object) {
@@ -29,6 +29,10 @@ public class Money {
 
     Money times(int multiple){
         return new Money(amount * multiple, currency);
+    }
+
+    Money plus(Money addend){
+        return new Money(amount + addend.amount, currency);
     }
 
     String currency(){
