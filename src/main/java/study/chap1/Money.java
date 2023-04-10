@@ -27,12 +27,16 @@ public class Money implements Expression{
         return amount + " " + currency;
     }
 
+    public Money reduce(String to){
+        return this;
+    }
+
     Money times(int multiple){
         return new Money(amount * multiple, currency);
     }
 
     Expression plus(Money addend){
-        return new Money(amount + addend.amount, currency);
+        return new Sum(this, addend);
     }
 
     String currency(){
