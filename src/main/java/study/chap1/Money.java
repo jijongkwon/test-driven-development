@@ -1,6 +1,6 @@
 package study.chap1;
 
-public class Money {
+public class Money implements Expression{
     protected int amount;
     protected String currency;
 
@@ -31,7 +31,7 @@ public class Money {
         return new Money(amount * multiple, currency);
     }
 
-    Money plus(Money addend){
+    Expression plus(Money addend){
         return new Money(amount + addend.amount, currency);
     }
 
