@@ -71,4 +71,9 @@ class MoneyTest {
         assertTrue(new Money(10, "CHF").equals(
                 new Franc(10, "CHF")));
     }
+
+    @Test
+    public void testIdentityRate(){
+        assertEquals(1, new Bank().rate("USD", "USD"));
+    }
 }
