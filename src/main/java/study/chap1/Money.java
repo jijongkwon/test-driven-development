@@ -32,7 +32,7 @@ public class Money implements Expression{
         return new Money(amount / rate, to);
     }
 
-    Expression times(int multiple){
+    public Expression times(int multiple){
         return new Money(amount * multiple, currency);
     }
 
