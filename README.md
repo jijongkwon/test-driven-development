@@ -1,3 +1,3 @@
 # 🎯 test-driven-development study
 
-## chap1 dollar
+TDD 캔트 벡 책을 보고 따라치기
